@@ -1,0 +1,138 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.mainContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    height: 100vh;
+    background-color: #020202;
+}
+
+.innerContainer {
+    height: 410px;
+    width: 410px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: #ffffff;
+}
+
+.rotate {
+    transition: .15s ease-in;
+    background-image: conic-gradient(#ffffff, #ffffff, #020202);
+    animation: rotation 60s linear;
+    background-color: transparent;
+}
+
+.reverse {
+    animation: reverse1 60s linear;
+    transition: .15s ease-in;
+}
+
+.blink {
+    transition: .15s ease-in;
+    animation: blink .5s infinite linear;
+}
+
+
+.midContainer {
+    height: 400px;
+    width: 400px;
+    border-radius: 100%;
+    background-color: #020202;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 72px;
+    gap: 10px;
+}
+
+.controleSection {
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+label {
+    font-size: 24px;
+    padding-left: 25px;
+}
+
+input {
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    font-size: 36px;
+    width: 100px;
+    padding: 5px;
+    text-align: center;
+    display: block;
+}
+
+button {
+    font-size: 30px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 10px;
+    width: 400px;
+}
+
+button:hover {
+    background-color: rgb(58, 58, 252);
+    color: #ffffff;
+    transition: .15s ease-in;
+    scale: 1.03;
+}
+
+button:active {
+    scale: 1;
+}
+
+.minDiv, .secDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+@keyframes reverse1 {
+    from {
+        transform: rotate(359deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+
+
+@keyframes blink {
+    from {
+        background-color: #ff0000;
+    }
+    to {
+        background-color: #020202;
+    }
+}
