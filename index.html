@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Countdown</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="mainContainer">
+      <div class="innerContainer">
+        <div class="midContainer">
+          <div class="minDis">00</div>
+          :
+          <div class="secDis">00</div>
+        </div>
+      </div>
+      <div class="controleSection">
+        <div class="minDiv">
+          <label for="minute">Min</label>
+          <input name="minute" type="number" class="min" value="0" min="0"/>
+        </div>
+        <div class="secDiv">
+          <label for="second">Sec</label>
+          <input name="second" type="number" class="sec" value="0" min="0"/>
+        </div>
+      </div>
+      <button class="submit">Start Countdown</button>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
