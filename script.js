@@ -91,7 +91,7 @@ function startInterval() {
         secPad = String(secNumVal).padStart(2, '0')
         secDis.innerText = secPad;
     }
-    if (minNumVal > 0) {
+    if (minNumVal > 0 && secNumVal === 0) {
         // Reduce the min value by one.
         minNumVal = minNumVal - 1;
 
